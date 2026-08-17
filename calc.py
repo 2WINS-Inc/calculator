@@ -1,6 +1,6 @@
 # チームCの簡単な計算機プログラム
 
-def calculate(a, b, operator):
+def calculate(a: int | float, b: int | float, operator: str) -> int | float:
     if operator == "+":
         return a + b
     elif operator == "-":
@@ -8,6 +8,8 @@ def calculate(a, b, operator):
     elif operator == "*":
         return a * b
     elif operator == "/":
+        if b == 0:
+            raise ValueError("0で除算はできません")
         return a / b
     else:
         raise ValueError("不明な演算子です")
