@@ -8,13 +8,19 @@ def calculate(a, b, operator):
     elif operator == "*":
         return a * b
     elif operator == "/":
+        if b == 0:
+            raise ZeroDivisionError("0で割ることはできません")
         return a / b
+    elif operator == "%":
+        return a % b
+    elif operator == "^":
+        return a ** b
     else:
         raise ValueError("不明な演算子です")
 
 if __name__ == "__main__":
     a = float(input("最初の数値: "))
-    operator = input("演算子 (+, -, *, /): ")
+    operator = input("演算子 (+, -, *, /, %, ^): ")
     b = float(input("次の数値: "))
 
     result = calculate(a, b, operator)
