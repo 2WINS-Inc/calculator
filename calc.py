@@ -1,4 +1,6 @@
 def calculate(a, b, operator):
+    """Return the result of applying an arithmetic operator to two numbers."""
+
     if operator == "+":
         return a + b
     elif operator == "-":
