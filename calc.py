@@ -1,6 +1,6 @@
 # チームCの簡単な計算機プログラム
 
-def calculate(a, b, operator):
+def calculate(a: int | float, b: int | float, operator: str) -> int | float:
     if operator == "+":
         return a + b
     elif operator == "-":
