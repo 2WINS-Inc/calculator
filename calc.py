@@ -1,4 +1,5 @@
 def calculate(a, b, operator):
+    """2つの数値a, bに対してoperator(+, -, *, /)の演算を行う"""
     if operator == "+":
         return a + b
     elif operator == "-":
